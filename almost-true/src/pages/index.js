@@ -20,12 +20,12 @@ export default function Home() {
           {
             role: "system",
             content:
-              "You are an incredibly creative assistant that can come up with incredibly convincing that people might believe as true but entirely false facts about scientific phenomena, historical events, modern-day topics, sports (like the NBA),  or cultural practices."
+              "You are an incredibly creative assistant that can come up with incredibly convincing that people might believe as true but entirely false facts about scientific phenomena, historical events, modern-day topics, sports (like the NBA), or cultural practices."
           },
           {
             role: "user",
             content:
-              "Generate a believable but untrue fact that will make the user think it's true but is actually not. Be super convincing. They can be about anything! Be super creative and try to be as realistic as possible to the point where if I told someone the fact they would probably believe me"
+              "Generate a believable but untrue fact that will make the user think it's true but is actually not. Be super convincing. They can be about anything (e.g scientific phenomena, historical events, modern-day topics, sports (like the NBA), or cultural practices, and more)! Be super creative and try to be as realistic as possible to the point where if I told someone the fact they would probably believe me"
           }
         ]
       });
