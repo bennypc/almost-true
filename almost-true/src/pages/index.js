@@ -20,7 +20,7 @@ export default function Home() {
           {
             role: "system",
             content:
-              "You are a creative assistant that can come up with convincing but entirely false facts about scientific phenomena, historical events, modern-day topics or cultural practices."
+              "You are an incredibly creative assistant that can come up with incredibly convincing that people might believe as true but entirely false facts about scientific phenomena, historical events, modern-day topics, sports (like the NBA),  or cultural practices."
           },
           {
             role: "user",
