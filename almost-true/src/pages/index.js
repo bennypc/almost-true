@@ -1,24 +1,50 @@
 import { useState } from "react";
+import axios from "axios";
 
-const IndexPage = () => {
+export default function Home() {
   const [fact, setFact] = useState("");
 
   const generateFact = async () => {
-    // Call the ChatGPT API here to generate an "almost-true" fact
-    // Assign the generated fact to the 'fact' state
+    try {
+      const { Configuration, OpenAIApi } = require("openai");
+
+      const configuration = new Configuration({
+        apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY
+      });
+      const openai = new OpenAIApi(configuration);
+
+      const completion = await openai.createChatCompletion({
+        model: "gpt-3.5-turbo",
+
+        messages: [
+          {
+            role: "system",
+            content:
+              "You are a creative assistant that can come up with convincing but entirely false facts about scientific phenomena, historical events, or cultural practices."
+          },
+          {
+            role: "user",
+            content:
+              "Generate a believable but untrue fact that will make the user think it's true but is actually not. be super convincing."
+          }
+        ]
+      });
+      console.log(completion.data.choices[0].message);
+      setFact(completion.data.choices[0].message.content);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold mb-8">{fact}</h1>
+    <div className="flex flex-col items-center justify-center h-screen">
+      <h1 className="text-4xl mb-4">{fact}</h1>
       <button
-        className="px-4 py-2 bg-blue-500 text-white rounded shadow"
+        className="py-2 px-4 bg-blue-500 text-white rounded"
         onClick={generateFact}
       >
-        Generate
+        Generate Fact
       </button>
     </div>
   );
-};
-
-export default IndexPage;
+}
