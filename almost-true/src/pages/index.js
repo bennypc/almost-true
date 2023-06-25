@@ -42,7 +42,7 @@ export default function Home() {
         {fact}
       </p>
       <button
-        className="py-2 px-4 bg-blue-500 text-white rounded mt-4"
+        className="py-2 px-4 bg-blue-500 text-white rounded mt-4 mb-12"
         onClick={generateFact}
       >
         Generate Fact
