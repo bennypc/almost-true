@@ -25,7 +25,7 @@ export default function Home() {
           {
             role: "user",
             content:
-              "Generate a believable but untrue fact that will make the user think it's true but is actually not. Be super convincing. They can be about anything (e.g scientific phenomena, historical events, modern-day topics, sports (like the NBA), or cultural practices, and more)! Be super creative and try to be as realistic as possible to the point where if I told someone the fact they would probably believe me"
+              "Generate a believable but untrue fact that will make the user think it's true but is actually not. Be super convincing. They can be about anything (e.g scientific phenomena, historical events, modern-day topics, sports (like the NBA), or cultural practices, and more)! Be super creative and try to be as realistic as possible to the point where if I told someone the fact they would probably believe me. These should be new and should not just be common myths that are found online. BE CREATIVE. GIVE REASONING TO MAKE THE FACT LOOK LIKE ITS VERY REAL."
           }
         ]
       });
